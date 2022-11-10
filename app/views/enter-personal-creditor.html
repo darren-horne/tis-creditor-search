@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Enter a personal creditor
+      </h1>
+
+<form class="form" action=/personal-creditor-amount-owed method="post">
+
+      <p>Provide details of this personal creditor</p>
+
+      {{ govukInput({
+  label: {
+    text: "First name"
+  },
+  classes: "govuk-!-width-one-half",
+  id: "pesonal-creditor-first-name",
+  name: "personal-creditor-first-name"
+}) }}
+
+{{ govukInput({
+label: {
+text: "Surname"
+},
+classes: "govuk-!-width-one-half",
+id: "pesonal-creditor-surname",
+name: "personal-creditor-surname"
+}) }}
+
+{{ govukInput({
+label: {
+text: "Relationship to you"
+},
+classes: "govuk-!-width-one-half",
+hint: {
+    text: "For example, parent, brother, sister, colleague and friend"
+  },
+id: "pesonal-creditor-relationship-to-you",
+name: "personal-creditor-relationship-to-you"
+}) }}
+
+{{ govukInput({
+label: {
+text: "First line of address"
+},
+classes: "govuk-!-width-one-half",
+id: "pesonal-creditor-address-1",
+name: "personal-creditor-address-1"
+}) }}
+
+{{ govukInput({
+label: {
+text: "Second line of address"
+},
+classes: "govuk-!-width-one-half",
+id: "pesonal-creditor-address-2",
+name: "personal-creditor-address-2"
+}) }}
+
+{{ govukInput({
+label: {
+text: "Third line of address"
+},
+classes: "govuk-!-width-one-half",
+id: "pesonal-creditor-address-3",
+name: "personal-creditor-address-3"
+}) }}
+
+{{ govukInput({
+label: {
+text: "Town / City"
+},
+classes: "govuk-!-width-one-half",
+id: "pesonal-creditor-town/city",
+name: "personal-creditor-town/city"
+}) }}
+
+{{ govukInput({
+label: {
+text: "Post code"
+},
+classes: "govuk-!-width-one-half",
+id: "pesonal-creditor-post-code",
+name: "personal-creditor-post-code"
+}) }}
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </div>
+  </div>
+
+{% endblock %}

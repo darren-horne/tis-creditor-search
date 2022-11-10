@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Money you owe</h1>
+
+      <form class="form" action=/creditor-type-answer method="post">
+
+        <p>Organisations and people you owe money to are known as creditors.</p>
+
+        <p>We need to know about all of your creditors, including family members or friends. </p>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "creditor-type",
+          fieldset: {
+            legend: {
+              text: "Select creditor type",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "You need to tell us about all of your creditors individually. You can add more creditors later."
+          },
+          items: [
+            {
+              value: "Personal",
+              text: "Personal",
+              hint: {
+                text: "For example, parents, siblings, other family members, colleagues and friends."
+              }
+            },
+            {
+              value: "Business or orgnanisation",
+              text: "Business or orgnanisation",
+              hint: {
+                text: "For example, financial institutions, local authorities, HMRC, and utility companies."
+              }
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Select</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

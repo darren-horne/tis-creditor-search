@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Enter a business creditor
+      </h1>
+
+      <p>We need to capture details of each of the organisation that you owe money to. You will need to search for them below. You can return and add more creditors later.</p>
+</p>
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Enter the name of the organisation",
+    classes: "govuk-label--m",
+    isPageHeading: true
+  },
+  classes: "govuk-!-width-three-quarters",
+  hint: {
+    text: "For example HMRC, Gas Company Ltd or ABC Bank PLC "
+  },
+  id: "account-number",
+  name: "account-number",
+  inputmode: "numeric",
+  spellcheck: false
+}) }}
+  <button class="govuk-button" data-module="govuk-button">Search</button>
+    </div>
+  </div>
+
+{% endblock %}
