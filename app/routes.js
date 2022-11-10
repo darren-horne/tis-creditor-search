@@ -21,4 +21,21 @@ router.post('/creditor-type-answer', function (req, res) {
 })
 
 
+// Run this code when a form is submitted to 'another-creditor'
+router.post('/another-creditor-form', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var anothercreditor = req.session.data['another-creditor']
+
+  // Check whether the variable matches a condition
+  if (anothercreditor == "yes"){
+    // Send user to next page
+    res.redirect('/money-you-owe')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/start')
+  }
+
+})
+
 module.exports = router
