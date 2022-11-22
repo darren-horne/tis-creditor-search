@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Manually enter a business creditor</h1>
+
+
+      <p>If you are unable to find the creditor in our list of creditors then you can manually enter their details below.</p>
+
+      <div class="govuk-inset-text">
+         <p class="govuk-body">Entering a manual creditor should be done as a last resort. Using your own manual creditor where a centrally managed one exists can result in your application being delayed. Look at our <a href="#" class="govuk-link">list of frequently incorrecly entered creditors</a>. for additional guidance on entering creditor details correctly.
+      </div>
+
+<h3 class="govuk-heading-m">Enter a business creditor’s details</h3>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="one-half">
+    Creditors name
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-name" name="new-business-creditors-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="one-half">
+    Search address
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-address" name="new-business-creditors-address" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="one-half">
+    Building and street
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-address1" name="new-business-creditors-address1" type="text">
+</div>
+<div class="govuk-form-group">
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-address2" name="new-business-creditors-address2" type="text">
+</div>
+<div class="govuk-form-group">
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-address3" name="new-business-creditors-address3" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="one-half">
+    Town / City
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-town-city" name="new-business-creditors-town-city" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="one-half">
+    Post code
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-post-code" name="new-business-creditors-post-code" type="text">
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="one-half">
+    Country
+  </label>
+  <input class="govuk-input govuk-!-width-one-half" id="new-business-creditors-country" name="new-business-creditors-country" type="text">
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+{% endblock %}

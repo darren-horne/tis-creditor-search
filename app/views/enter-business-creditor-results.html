@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action=/search-results-answer method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Enter a business creditor
+      </h1>
+
+      <p>We need to capture details of each of the organisation that you owe money to. You will need to search for them below. You can return and add more creditors later.</p>
+</p>
+
+
+
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+        Enter the name of the organisation?
+      </label>
+    <div id="search-organisation-hint" class="govuk-hint">
+      For example HMRC, Gas Company Ltd or ABC Bank PLC
+        </div>
+    <input class="govuk-input govuk-!-width-three-quarters" id="search-organisation" name="search-organisation" type="text">
+  </div>
+  <button class="govuk-button" data-module="govuk-button">
+    Search
+  </button>
+
+  <p class="govuk-body-l">18 results</p>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+
+      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+          <label class="govuk-label govuk-radios__label" for="Natwest - BBL Only">
+            Natwest - BBL Only
+          </label>
+        </div>
+        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+            <label class="govuk-label govuk-radios__label" for="Natwest Black Private Card">
+              Natwest Black Private Card
+            </label>
+          </div>
+          <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+              <label class="govuk-label govuk-radios__label" for="Natwest Business Card">
+                Natwest Business Card
+              </label>
+            </div>
+            <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="Natwest Classic Card (4544 20)">
+                  Natwest Classic Card (4544 20)
+                </label>
+              </div>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="Natwest Classic Card (4544 38)">
+                    Natwest Classic Card (4544 38)
+                  </label>
+                </div>
+                <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                    <label class="govuk-label govuk-radios__label" for="Natwest Classic Card (5434 68)">
+                      Natwest Classic Card (5434 68)
+                    </label>
+                  </div>
+                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                      <label class="govuk-label govuk-radios__label" for="Natwest Commercial One Card">
+                        Natwest Commercial One Card
+                      </label>
+                    </div>
+                    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                        <label class="govuk-label govuk-radios__label" for="Natwest Corporate Credit Card">
+                          Natwest Corporate Credit Card
+                        </label>
+                      </div>
+                      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                          <label class="govuk-label govuk-radios__label" for="Natwest Company Credit Card">
+                            Natwest Company Credit Card
+                          </label>
+                        </div>
+                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                            <label class="govuk-label govuk-radios__label" for="Natwest Dual Credit Card (4263 93)">
+                              Natwest Dual Credit Card (4263 93)
+                            </label>
+                          </div>
+                          <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                              <label class="govuk-label govuk-radios__label" for="Natwest Dual Credit Card (5454 60)">
+                                Natwest Dual Credit Card (5454 60)
+                              </label>
+                            </div>
+                            <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                <label class="govuk-label govuk-radios__label" for="Natwest Dual Gold Credit Card (5436 99)">
+                                  Natwest Dual Gold Credit Card (5436 99)
+                                </label>
+                              </div>
+                              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                  <label class="govuk-label govuk-radios__label" for="Natwest Platinum World Card">
+                                    Natwest Platinum World Card
+                                  </label>
+                                </div>
+                                <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                    <label class="govuk-label govuk-radios__label" for="Natwest Plc">
+                                      Natwest Plc
+                                    </label>
+                                  </div>
+                                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                      <label class="govuk-label govuk-radios__label" for="Natwest Plc - Companies">
+                                        Natwest Plc - Companies
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                      <label class="govuk-label govuk-radios__label" for="Natwest Primary Credit Card">
+                                        Natwest Primary Credit Card
+                                      </label>
+                                    </div>
+                                    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                      <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                        <label class="govuk-label govuk-radios__label" for="Natwest Plc - Mortgages">
+                                          Natwest Plc - Mortgages
+                                        </label>
+                                      </div>
+                                      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                        <div class="govuk-radios__item">
+                                          <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="month">
+                                          <label class="govuk-label govuk-radios__label" for="Natwest Dual Gold Credit Card (4021 93)">
+                                            Natwest Dual Gold Credit Card (4021 93)
+                                          </label>
+<div class="govuk-radios__divider">or</div>
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                          <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="search-results-radios" name="search-results-radios" type="radio" value="None of the above">
+                                            <label class="govuk-label govuk-radios__label" for="None of the above">
+                                              None of the above
+                                            </label>
+
+
+    </fieldset>
+  </div>
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+{% endblock %}
