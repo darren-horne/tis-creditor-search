@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Provide debt details
+      </h1>
+
+      <p>Provide details about what you owe {{ data['search-results-radios'] }}
+      </p>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="cost">
+            Amount you owe
+          </label>
+          <div id="event-name-hint" class="govuk-hint">
+        For joint debts, enter the full debt amount
+      </div>
+        </h1>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="event-name">
+      Account or reference number
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    You can find this on correspondence from {{ data['search-results-radios'] }}. Leave blank if you don't have one.
+  </div>
+  <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+</div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              What type of debt is it?
+            </h1>
+          </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="type-of-debt" name="type-of-debt" type="radio" value="Credit or store card">
+                <label class="govuk-label govuk-radios__label" for="Credit-or-store-card">
+                  Credit card or store card
+                </label>
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-debt" name="type-of-debt" type="radio" value="Personal loan (unsecured)">
+                  <label class="govuk-label govuk-radios__label" for="Personal loan (unsecured)">
+                    Personal loan (unsecured)
+                  </label>
+                </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-debt" name="type-of-debt" type="radio" value="Overdraft">
+              <label class="govuk-label govuk-radios__label" for="Overdraft">
+                Overdraft
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-debt" name="type-of-debt" type="radio" value="text" data-aria-controls="Other">
+              <label class="govuk-label govuk-radios__label" for="Other">
+                Other
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="Other">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Please specify
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+              </div>
+
+        </fieldset>
+      </div>
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              How long ago did the debt start?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                0-6 months
+              </label>
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  7-12 months
+                </label>
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    1-2 years
+                  </label>
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      2-3 years
+                    </label>
+                  </div>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                        3-5 years
+                      </label>
+                    </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                5-10 years
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Over 10 years
+              </label>
+
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+  Continue
+{% endblock %}

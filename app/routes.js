@@ -50,7 +50,7 @@ router.post('/search-results-answer', function (req, res) {
     res.redirect('/enter-new-business-creditor')
   } else {
     // Send user to ineligible page
-    res.redirect('/amount-you-owe')
+    res.redirect('/amount-you-owe-business-existing')
   }
 
 })
