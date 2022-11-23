@@ -22,75 +22,137 @@
       <p>Provide details about what you owe {{ data['personal-creditor-first-name'] }} {{ data['personal-creditor-surname'] }}
       </p>
 
-      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-
-      {{ govukInput({
-      label: {
-      text: "Amount you owe",
-      classes: "govuk-label--m"
-      },
-      classes: "govuk-!-width-one-half",
-      hint: {
-          text: "For joint debts, enter the full debt amount
-      "
-        },
-      id: "amount-owed-to-personal-creditor",
-      name: "amount-owed-to-personal-creditor",
-      prefix: {
-        text: "£"
-      }
-      }) }}
-
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-      {{ govukRadios({
-        name: "How long ago did the debt start",
-        fieldset: {
-          legend: {
-            text: "How long ago did the debt start?",
-            classes: "govuk-label--m"
-          }
-        },
-        items: [
-          {
-            value: "0-6 months",
-            text: "0-6 months"
-          },
-          {
-            value: "7-12 months",
-            text: "7-12 months"
-          },
-          {
-            value: "1-2 years",
-            text: "1-2 years"
-          },
-          {
-            value: "2-3 years",
-            text: "2-3 years"
-          },  {
-              value: "3-5 years",
-              text: "3-5 years"
-            },
-          {
-            value: "5-10 years",
-            text: "5-10 years"
-          },
-          {
-            value: "over 10 years",
-            text: " over 10 years"
-          }
-        ]
-      }) }}
 
 
 
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="cost">
+                Amount you owe
+              </label>
+              <div id="debt-owed-personal" class="govuk-hint">
+            For joint debts, enter the full debt amount
+          </div>
+            </h1>
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input govuk-input--width-10" id="debt-owed-personal" name="debt-owed-personal" type="text" spellcheck="false">
+            </div>
+          </div>
 
 
 
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  What type of debt is it?
+                </h1>
+              </legend>
 
-    </div>
-  </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="type-of-debt-personal" name="type-of-debt-personal" type="radio" value="Child maintenance">
+                    <label class="govuk-label govuk-radios__label" for="Credit-or-store-card">
+                      Child maintenance
+                    </label>
+                  </div>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="type-of-debt-personal" name="type-of-debt-personal" type="radio" value="Landlord arrears">
+                      <label class="govuk-label govuk-radios__label" for="Personal loan (unsecured)">
+                        Landlord arrears
+                      </label>
+                    </div>
 
-{% endblock %}
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-debt-personal" name="type-of-debt-personal" type="radio" value="Private loan">
+                  <label class="govuk-label govuk-radios__label" for="Overdraft">
+                    Private loan
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="type-of-debt-personal" name="type-of-debt-personal" type="radio" value="text" data-aria-controls="Other">
+                  <label class="govuk-label govuk-radios__label" for="Other">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="Other">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="please-specify">
+                      Please specify
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="please-specify" name="please-specify" type="tel" autocomplete="tel">
+                  </div>
+
+            </fieldset>
+          </div>
+
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  How long ago did the debt start?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="0-6 months">
+                  <label class="govuk-label govuk-radios__label" for="0-6 months">
+                    0-6 months
+                  </label>
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="7-12 months">
+                    <label class="govuk-label govuk-radios__label" for="7-12 months">
+                      7-12 months
+                    </label>
+                  </div>
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="1-2 years">
+                      <label class="govuk-label govuk-radios__label" for="1-2 years">
+                        1-2 years
+                      </label>
+                    </div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="2-3 years">
+                        <label class="govuk-label govuk-radios__label" for="2-3 years">
+                          2-3 years
+                        </label>
+                      </div>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="3-5 years">
+                          <label class="govuk-label govuk-radios__label" for="3-5 years">
+                            3-5 years
+                          </label>
+                        </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="5-10 years">
+                  <label class="govuk-label govuk-radios__label" for="5-10 years">
+                    5-10 years
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="debt-start-personal" name="debt-start-personal" type="radio" value="over 10 years">
+                  <label class="govuk-label govuk-radios__label" for="over 10 years">
+                    Over 10 years
+                  </label>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+
+
+    {% endblock %}
