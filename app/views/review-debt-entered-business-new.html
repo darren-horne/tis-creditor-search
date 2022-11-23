@@ -14,10 +14,7 @@
 <h1 class="govuk-heading-l">Review creditors entered</h1>
 <div class="govuk-form-group">
 
-
   <p class="govuk-body">Review, change and remove the creditors you have added so far.</p>
-
-
 
   <table class="govuk-table">
     <thead class="govuk-table__head">
@@ -34,11 +31,25 @@
         <td class="govuk-table__cell">{{ data['debt-start-personal'] }}</td>
 
       </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">{{ data['search-results-radios'] }}</th>
+        <td class="govuk-table__cell">£{{ data['debt-owed-business'] }}</td>
+        <td class="govuk-table__cell">{{ data['debt-start-business'] }}</td>
+
+      </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{ data['new-business-creditors-name'] }}</th>
+      <td class="govuk-table__cell">£{{ data['debt-owed-business-new'] }}</td>
+      <td class="govuk-table__cell">{{ data['debt-start-business-new'] }}</td>
+
+    </tr>
 
     </tbody>
   </table>
 
-<div class="govuk-!-padding-bottom-9"></div>
+
+<div class="govuk-!-padding-bottom-4"></div>
 
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="another-creditor-hint">
@@ -67,8 +78,8 @@
 
     </fieldset>
   </div>
-
 <div class="govuk-!-padding-bottom-1"></div>
+
   <button class="govuk-button" data-module="govuk-button">Continue</button>
 
 {% endblock %}

@@ -10,7 +10,7 @@
 
 {% block content %}
 
-<form class="form" action=/search-input method="post">
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -20,7 +20,7 @@
       </h1>
 
       <p>We need to capture details of each of the organisation that you owe money to. You will need to search for them below. You can return and add more creditors later.</p>
-</p>
+
 
 
 
@@ -36,5 +36,11 @@
   <button class="govuk-button" data-module="govuk-button">
     Search
   </button>
+
+  <p class="govuk-body-l">0 results</p>
+
+
+  <p class="govuk-body">Cant find the creditor you are looking for? <a href=/enter-new-business-creditor class="govuk-link">Try adding a creditor manually</a>.</p>
+
 
 {% endblock %}
