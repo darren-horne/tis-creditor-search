@@ -72,5 +72,23 @@ router.post('/search-input', function (req, res) {
 
 })
 
+// Run this code when a form is submitted to 'personal-type-of-debt'
+router.post('/personal-type-of-debt', function (req, res) {
+
+  // Make a variable and give it the value from 'personal-debt-type'
+  var personal-debt-type = req.session.data['type-of-debt-personal']
+
+  // Check whether the variable matches a condition
+  if (personal-debt-type == "Private loan"){
+    // Send user to the enter a more details about the debt
+    res.redirect('/amount-you-owe-personal-debt-reason')
+  } else {
+    // Send user to review the details of the debt
+    res.redirect('/review-debt-entered-personal')
+  }
+
+
+})
+
 
 module.exports = router
