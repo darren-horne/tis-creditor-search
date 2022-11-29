@@ -72,23 +72,58 @@ router.post('/search-input', function (req, res) {
 
 })
 
-// Run this code when a form is submitted to 'personal-type-of-debt'
-router.post('/personal-type-of-debt', function (req, res) {
+// Run this code when a form is submitted to 'existing-business-debt-type-radio-answer'
+router.post('/existing-business-debt-type-radio-answer', function (req, res) {
 
-  // Make a variable and give it the value from 'personal-debt-type'
-  var personal-debt-type = req.session.data['type-of-debt-personal']
+  // Make a variable and give it the value from 'creditor type'
+  var existingbusinessdebttype = req.session.data['type-of-debt-business-existing']
 
   // Check whether the variable matches a condition
-  if (personal-debt-type == "Private loan"){
-    // Send user to the enter a more details about the debt
-    res.redirect('/amount-you-owe-personal-debt-reason')
+  if (existingbusinessdebttype == "Personal loan (unsecured)"){
+    // Send user to the enter a personal creditor details page
+    res.redirect('/amount-you-owe-business-existing-debt-reason')
   } else {
-    // Send user to review the details of the debt
-    res.redirect('/review-debt-entered-personal')
+    // Send user to the enter a business creditor details page
+    res.redirect('/review-debt-entered-business')
   }
 
+})
+
+// Run this code when a form is submitted to 'new-business-debt-type-radio-answer'
+router.post('/new-business-debt-type-radio-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'creditor type'
+  var newbusinessdebttype = req.session.data['type-of-debt-business-new']
+
+  // Check whether the variable matches a condition
+  if (newbusinessdebttype == "Personal loan (unsecured)"){
+    // Send user to the enter a personal creditor details page
+    res.redirect('/amount-you-owe-business-new-debt-reason')
+  } else {
+    // Send user to the enter a business creditor details page
+    res.redirect('/review-debt-entered-business-new')
+  }
 
 })
+
+
+// Run this code when a form is submitted to 'personal type of debt'
+//router.post('personal-type-of-debt', function (req, res) {
+
+  // Make a variable and give it the value from 'creditor type'
+  //var personaldebttype = req.session.data['type-of-debt-personal']
+
+  // Check whether the variable matches a condition
+  //if (personaldebttype == "Private loan"){
+    // Send user to the enter a more details
+    //res.redirect('/amount-you-owe-personal-debt-reason')
+  //} else {
+    // Send user to the review page
+    //res.redirect('/review-debt-entered-personal')
+  //}
+
+//})
+
 
 
 module.exports = router
