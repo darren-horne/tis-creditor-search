@@ -95,63 +95,35 @@
       </div>
 
 
-
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="new-business-debt-started-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
             <h1 class="govuk-fieldset__heading">
               How long ago did the debt start?
             </h1>
           </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="0-6 months">
-              <label class="govuk-label govuk-radios__label" for="0-6 months">
-                0-6 months
-              </label>
-            </div>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="7-12 months">
-                <label class="govuk-label govuk-radios__label" for="7-12 months">
-                  7-12 months
-                </label>
-              </div>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="1-2 years">
-                  <label class="govuk-label govuk-radios__label" for="1-2 years">
-                    1-2 years
-                  </label>
-                </div>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="2-3 years">
-                    <label class="govuk-label govuk-radios__label" for="2-3 years">
-                      2-3 years
-                    </label>
-                  </div>
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="3-5 years">
-                      <label class="govuk-label govuk-radios__label" for="3-5 years">
-                        3-5 years
-                      </label>
-                    </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="5-10 years">
-              <label class="govuk-label govuk-radios__label" for="5-10 years">
-                5-10 years
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="debt-start-business-new" name="debt-start-business-new" type="radio" value="over 10 years">
-              <label class="govuk-label govuk-radios__label" for="over 10 years">
-                Over 10 years
-              </label>
-
+          <div id="new-business-debt-started" class="govuk-hint">
+            Provide an approximate date for when the debt started. For example, December 2017
           </div>
+          <div class="govuk-date-input" id="new-business-debt-started">
 
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="new-business-debt-started-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-10" id="new-business-debt-started-month" name="new-business-debt-started-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="new-business-debt-started-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="new-business-debt-started-year" name="new-business-debt-started-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
         </fieldset>
       </div>
 

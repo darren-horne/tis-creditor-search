@@ -24,14 +24,14 @@
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Name</th>
         <th scope="col" class="govuk-table__header">Amount owed</th>
-        <th scope="col" class="govuk-table__header">Owed for</th>
+        <th scope="col" class="govuk-table__header">Debt started</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header">{{ data['personal-creditor-first-name'] }} {{ data['personal-creditor-surname'] }}</th>
         <td class="govuk-table__cell">£{{ data['debt-owed-personal'] }}</td>
-        <td class="govuk-table__cell">{{ data['debt-start-personal'] }}</td>
+        <td class="govuk-table__cell">{{ data['personal-debt-started-month'] }} {{ data['personal-debt-started-year'] }}</td>
 
       </tr>
 
